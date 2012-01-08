@@ -20,20 +20,21 @@ object LifeSoup {
     var x = 0
     var y = 0
     var i = 0
-    while (i < 100) {
+    while (true) {
       environment.update(1)
 //      panel.invalidate()
-      panel.validate()
+//      panel.validate()
       panel.repaint()
-      simpleFrame.invalidate()
-      simpleFrame.repaint()
+//      simpleFrame.invalidate()
+//      simpleFrame.repaint()
 
 
       environment.fastImage.buffer((x % width) + (y % height) * width) = 0x88888888
+      //environment.fastImage.updated()
 
-      println("updated, x " + x + " y " + y)
+//      println("updated, x " + x + " y " + y)
 
-      Thread.sleep(100)
+//      Thread.sleep(100)
 
       x += 1
       y += 1

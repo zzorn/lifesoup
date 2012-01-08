@@ -33,6 +33,14 @@ final class FastImage(val width: Int, val height: Int) {
 
   def buffer: Array[Int] = imageData
 
+  def updated() {
+     updatedArea(0, 0, width, height)
+  }
+
+  def updatedArea(x: Int, y: Int, w: Int, h: Int) {
+     imageSource.newPixels(x, y, w, h);
+  }
+
   def clear() {
       clearToColor(Color.WHITE)
   }
