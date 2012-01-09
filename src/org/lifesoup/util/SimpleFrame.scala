@@ -9,11 +9,11 @@ import javax.swing.{JComponent, JFrame}
  *
  * @author Hans Haggstrom
  */
-class SimpleFrame(title : String, content : JComponent) extends JFrame {
+class SimpleFrame(title : String, content : JComponent, width: Int = 800, height: Int = 600) extends JFrame {
 
   setTitle(title)
   setContentPane( content )
-  setPreferredSize( new Dimension(800, 600) )
+  setPreferredSize( new Dimension(width, height) )
 
   setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE )
 
